@@ -37,7 +37,8 @@ body {
   padding-top: 90px;
 }
 .button-header,
-.more-info {
+.more-info,
+.button-header-mobile {
   color: white;
   border-radius: 13px;
   cursor: pointer;
@@ -365,7 +366,8 @@ button a {
   align-items: center;
 }
 /* HOVERS */
-.button-header:hover {
+.button-header:hover,
+.button-header-mobile:hover {
   transition: all 0.2s ease-in-out;
   background-color: #1c87d3;
 }
@@ -373,8 +375,233 @@ button a {
   transition: all 0.2s ease-in-out;
   background-color: #0f629e;
 }
+.participationh4 {
+  text-align: center;
+}
+.menu-container {
+  position: relative;
+}
+
+/* Кнопка открытия меню */
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Оверлей (фон) меню */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: #ddf1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease-in-out;
+}
+.nav-header-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.nav-header-menu a {
+  color: #00a3c1;
+  font-weight: 700;
+  font-size: 16px;
+}
+/* Контент внутри меню */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/* Кнопка закрытия */
+.close-button {
+  background: none;
+  border: none;
+  color: #0d28ad;
+  height: max-content;
+  cursor: pointer;
+  align-self: flex-end;
+  font-size: 41px;
+}
+.menu-overlay.active {
+  right: 0;
+}
+.participation h4 {
+  text-align: center;
+}
 @media (max-width: 1400px) {
   .block-text-for p {
     font-size: 18px;
+  }
+}
+@media (max-width: 990px) {
+  .university {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .main-info {
+    padding: 30px 0;
+  }
+  .nav-header,
+  .button-header-mobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+    font-size: 33px;
+    color: #1800a6;
+  }
+  .for_whom_block,
+  .for_whom_block2 {
+    width: 100%;
+  }
+  .block-text-for {
+    padding: 20px;
+  }
+  .direction-one img {
+    width: 40px;
+  }
+  .for_whom_block,
+  .for_whom_block2:not(:last-child) {
+    border-bottom: 1px solid #00a3c1;
+  }
+  .for_whom h1,
+  .directions h1 {
+    text-align: center;
+    color: #00a3c1;
+    font-size: 31px;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  .directions-block {
+    gap: 10px;
+  }
+  .direction-one {
+    font-size: 18px;
+  }
+  .why-participate-block h1 {
+    font-size: 31px;
+  }
+  .why-participate-info-one {
+    font-size: 18px;
+  }
+  .container-info-date {
+    gap: 70px;
+  }
+  .title-info-date {
+    font-size: 34px;
+  }
+  .block-info-date {
+    max-width: 385px;
+  }
+  .university {
+    padding-bottom: 22px;
+  }
+  .university h5 {
+    margin: 10px 0;
+  }
+  .buttons-main-info {
+    padding: 0;
+  }
+}
+@media (max-width: 617px) {
+  .university h5,
+  .university h4,
+  .university h5 {
+    font-size: 12px;
+  }
+  .title-main-info h3, .one-block-info-date p {
+    font-size: 18px;
+  }
+  .title-main-info h1 {
+    font-size: 22px;
+  }
+  .more-info.main-info-button,
+  .button-header.main-info-button {
+    padding: 11px 24px;
+    font-size: 14px;
+  }
+  .container-info-date {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .title-info-date, .block_about h1, .for_whom h1, .directions h1, .why-participate-block h1, .participation h1 {
+    font-size: 28px;
+}
+.one-block-info-date img {
+  width: 40px;
+}
+.block-info-date {
+  gap: 15px;
+}
+.block_about p {
+  line-height: 29px;
+}
+.block_about, .why-participate-info {
+  gap: 10px;
+}
+}
+@media (max-width: 560px) {
+  .block_about {
+    padding: 30px;
+  }
+ .block-text-for, .img_whom_block, .img_whom_block img {
+  height: 190px;
+ }
+ .block-text-for p {
+  font-size: 12px;
+}
+.block-arrow-left {
+  left: -21px;
+  font-size: 30px;
+}
+.direction-one p{
+  font-size: 16px;
+}
+.title-info-date, .block_about h1, .for_whom h1, .directions h1, .why-participate-block h1, .participation h1 {
+  font-size: 22px;
+}
+.why-participate-block{
+  padding: 30px;
+}
+.why-participate-block h1 {
+  text-align: center;
+}
+.participation {
+  gap: 0;
+}
+.one-footer-block a {
+  text-align: center;
+}
+}
+
+@media (max-width: 430px) {
+  .buttons-main-info {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  .block_about p {
+    line-height: 19px;
+    font-size: 14px;
+  }
+
+  .more-info.main-info-button, .button-header.main-info-button {
+    margin: 0;
+  }
+  .title-main-info, .for_whom_container, .directions-block {
+    margin-bottom: 30px;
   }
 }
